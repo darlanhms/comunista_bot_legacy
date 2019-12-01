@@ -10,15 +10,6 @@ api = twitter.Api(consumer_key='',
 
 palavra = ''
 
-#timer para executas as funcoes em determinado tempo
-def set_interval(func, sec):
-    def func_wrapper():
-        set_interval(func, sec) 
-        func()  
-    t = threading.Timer(sec, func_wrapper)
-    t.start()
-    return t
-
 def buscarPalavra():
     with open('palavras.txt', encoding="utf8", mode='r') as f:
          with open('palavrasUsadas.txt', mode='a') as u:
@@ -58,9 +49,7 @@ def buscarPalavra():
                     #enfim posta o status no twitter
                     api.PostUpdate(f'{palavra} é comunista')
 
- 
 
-set_interval(buscarPalavra, 600.0)
 
 buscarPalavra()
 
