@@ -1,4 +1,4 @@
-# comunista_bot
+# comunista_bot - descontinuado
 um bot que diz que tudo e todos são comunistas.
 
 ### essa é a source oficial do https://twitter.com/comunistabot1
